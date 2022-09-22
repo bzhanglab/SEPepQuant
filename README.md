@@ -8,6 +8,8 @@ Curently, SEPEPquant only support FragPipe processed Label free and TMT data.
 
 SEPEPquant does not need setup or installation. It has been test on Linux and Windows.
 
+## Protein database
+
 ## Testing data set
 
 ### TMT11   data set from 
@@ -18,5 +20,17 @@ perl SEPEPquant.pl --database protein_database\GRCh38_latest_protein_NP_YP_XP.ch
 ```r
 perl SEPEPquant.pl --database protein_database\GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants_with_decoys.fa --fdr 0.01 --quant LF --input testing_data\Label_free --output testing_data_output_LF
 ```
+
+### Parameters
+
+--database: protein database used for database searching
+--quant: LF or TMT
+--plex: TMT plex, required if --quant is TMT
+--RefTag: Tag of TMT reference channel, required if --quant is TMT
+--input: folder of FragPipe output
+--output: output filder
+--help: this information
+
+
 
 
