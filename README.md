@@ -5,4 +5,4 @@
 
 ## Installation
 
-
+SEPEPquant does not need setup or installation. It has been test on Linux and Windows.
