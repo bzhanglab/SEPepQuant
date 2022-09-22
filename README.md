@@ -4,6 +4,20 @@
 # Usage 
 Curently, SEPEPquant only support FragPipe processed Label free and TMT data.  
 
+```shell
+├── datasets
+│   ├── d1.tsv
+│   ├── d2.tsv
+│   ├── d3.tsv
+│   ├── d4.tsv
+│   ├── d5.tsv
+│   └── d6.tsv
+├── protein.tsv
+├── run_OmicsEV.R
+├── sample_list.tsv
+└── sample_ml.tsv
+```
+
 ## Installation
 
 SEPEPquant does not need setup or installation. It has been test on Linux and Windows.
