@@ -24,11 +24,17 @@ perl SEPEPquant.pl --database protein_database\GRCh38_latest_protein_NP_YP_XP.ch
 ### Parameters
 
 --database: protein database used for database searching
+
 --quant: LF or TMT
+
 --plex: TMT plex, required if --quant is TMT
+
 --RefTag: Tag of TMT reference channel, required if --quant is TMT
+
 --input: folder of FragPipe output
+
 --output: output filder
+
 --help: this information
 
 
