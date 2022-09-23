@@ -1,11 +1,11 @@
 # SEPEPquant
  Tripartite graph modeling enables comprehensive protein isoform characterization in shotgun proteomics
 
-[<img src="https://github.com/bzhanglab/SEPEPquant/blob/main/doc/protein-and-peptide-distribution.jpg" width=400 class="center">]
+[<img src="https://github.com/bzhanglab/SEPEPquant/blob/main/doc/protein-and-peptide-distribution.jpg" width=400 class="center">](https://github.com/bzhanglab/SEPEPquant)
 
-[<img src="https://github.com/bzhanglab/SEPEPquant/blob/main/doc/parsimony-selection.jpg" width=400 class="center">]
+[<img src="https://github.com/bzhanglab/SEPEPquant/blob/main/doc/parsimony-selection.jpg" width=400 class="center">](https://github.com/bzhanglab/SEPEPquant)
 
-[<img src="https://github.com/bzhanglab/SEPEPquant/blob/main/doc/sepep-quantification.jpg" width=400 class="center">]
+[<img src="https://github.com/bzhanglab/SEPEPquant/blob/main/doc/sepep-quantification.jpg" width=400 class="center">](https://github.com/bzhanglab/SEPEPquant)
 
 # Usage 
 Curently, SEPEPquant only support [FragPipe](https://fragpipe.nesvilab.org/) processed Label free and TMT data.  
