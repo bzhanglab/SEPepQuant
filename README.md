@@ -64,8 +64,9 @@ This file contains numbers of protein(s) of each gene in the protein database.
 This file descripts mappings between SEPEPs, host gene(s) and host protein(s).
 
 ### 3. sepep quantification files
-#### TMT data: It will output both raw (sepep_matrix_raw.txt) and median centered (sepep_matrix_MD.txt) Log2(TMT ratio) for TMT data. 
-#### Label free data: It will output both MS1 intensity and spectral count in a same file.
+TMT data: It will report both raw (sepep_matrix_raw.txt) and median centered (sepep_matrix_MD.txt) Log2(TMT ratio) for TMT data.
+ 
+Label free data: It will report both MS1 intensity and spectral count in a same file.
 
 
 ## Parameters
