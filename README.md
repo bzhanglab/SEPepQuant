@@ -5,14 +5,17 @@
 Curently, SEPEPquant only support FragPipe processed Label free and TMT data.  
 
 ```shell
-
-├── sample1/TMT1
+FragPipe_output
+├── Sample1/TMT1
 │   ├── peptide.tsv
-├── sample1/TMT1
+│
+├── Sample2/TMT2
 │   ├── peptide.tsv
-├── sample1/TMT1
+│
+├── Sample3/TMT3
 │   ├── peptide.tsv
-├── sample1/TMT1
+│
+├── Sample4/TMT4
 │   ├── peptide.tsv
 
 ```
