@@ -55,7 +55,19 @@ perl SEPEPquant.pl --database protein_database\GRCh38_latest_protein_NP_YP_XP.ch
 perl SEPEPquant.pl --database protein_database\GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants_with_decoys.fa --fdr 0.01 --quant LF --input testing_data\Label_free --output testing_data_output_LF
 ```
 
-### Parameters
+## Outputs
+
+### 1. gene-protein-statistic.txt
+This file contains numbers of protein(s) of each gene in the protein database.
+
+### 2. sepep_mapping_table.txt
+This file descripts mappings between SEPEPs, host gene(s) and host protein(s).
+
+### 3. sepep_matrix.txt
+
+
+
+## Parameters
 
 --database: protein database used for database searching
 
