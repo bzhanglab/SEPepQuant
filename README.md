@@ -2,7 +2,7 @@
  Tripartite graph modeling enables comprehensive protein isoform characterization in shotgun proteomics
 
 # Usage 
-Curently, SEPEPquant only support FragPipe processed Label free and TMT data.  
+Curently, SEPEPquant only support FragPipe (https://fragpipe.nesvilab.org/) processed Label free and TMT data.  
 
 ```shell
 FragPipe_output
