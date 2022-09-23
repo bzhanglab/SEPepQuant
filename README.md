@@ -25,7 +25,7 @@ FragPipe_output
 SEPEPquant does not need setup or installation. It has been test on Linux and Windows.
 
 ## Protein database
-The exact protein database used for FragPipe is required for SEPEPquant.
+The exact protein database used for FragPipe is required for SEPEPquant. The database should follow the [philosopher format rules](https://github.com/Nesvilab/philosopher/wiki/How-to-Prepare-a-Protein-Database#header-formatting) and in [UniProt](https://www.uniprot.org/help/fasta-headers) format.
 
 
 ## Testing data set
