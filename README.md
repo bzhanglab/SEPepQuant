@@ -25,6 +25,8 @@ FragPipe_output
 SEPEPquant does not need setup or installation. It has been test on Linux and Windows.
 
 ## Protein database
+The exact protein database used for FragPipe is required for SEPEPquant.
+
 
 ## Testing data set
 
