@@ -48,11 +48,11 @@ The exact protein database used for FragPipe is required for SEPEPquant. The dat
 
 ### Example 1: [TMT11 data set](https://www.sciencedirect.com/science/article/pii/S0092867419310037) 
 ```r
-perl SEPEPquant.pl --database protein_database\GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants_with_decoys.fa --fdr 0.01 --quant TMT --plex 11 --RefTag Mix --input testing_data\TMT --output testing_data_output_TMT
+perl SEPEPquant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants_with_decoys.fa --fdr 0.01 --quant TMT --plex 11 --RefTag Mix --input testing_data/TMT --output testing_data_output_TMT
 ```
 ### Example 2: [Label free data set](https://www.nature.com/articles/s41586-019-0987-8) 
 ```r
-perl SEPEPquant.pl --database protein_database\GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants_with_decoys.fa --fdr 0.01 --quant LF --input testing_data\Label_free --output testing_data_output_LF
+perl SEPEPquant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants_with_decoys.fa --fdr 0.01 --quant LF --input testing_data/Label_free --output testing_data_output_LF
 ```
 
 ## Outputs
