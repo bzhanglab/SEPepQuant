@@ -16,19 +16,20 @@ my @folder_list=();
 
 my $SEPEP_fdr=0.01;
 my $help=0;
-my $protein_database="";
+my $protein_sequence_file="";
 my $quant_type="";
 my $tmt_plex="";
 my $Ref_Tag="";
 my $output_dir="";
 my $input_dir="";
 
+
 if (scalar(@ARGV) == 0)
 {
     pod2usage(-msg => "Usage :\n--database: protein database used for database searching\n--quant: LF or TMT\n--plex: TMT plex, required if --quant is TMT\n--RefTag: Tag of TMT reference channel, required if --quant is TMT\n--input: folder of FragPipe output\n--output: output filder\n--help: help information\n",-exitval => 2)
 }
 
-GetOptions("database=s" => \$protein_database,
+GetOptions("database=s" => \$protein_sequence_file,
     "fdr=f" => \$SEPEP_fdr,
     "quant=s" => \$quant_type,
     "plex=i" => \$tmt_plex,
@@ -41,7 +42,7 @@ if ($help ==1 )
 {
     pod2usage(-msg => "Usage:\n--database: protein database used for database searching\n--quant: LF or TMT\n--plex: TMT plex, required if --quant is TMT\n--RefTag: Tag of TMT reference channel, required if --quant is TMT\n--input: folder of FragPipe output\n--output: output filder\n--help: this information\n",-exitval => 2)
 }
-elsif (!$protein_database || !$quant_type || !$input_dir || !$output_dir) 
+elsif (!$protein_sequence_file || !$quant_type || !$input_dir || !$output_dir) 
 {
     pod2usage(-msg => "\nAll these parameters are required: --database, --quant, --input, and --output!\n--database: protein database used for database searching\n--quant: LF or TMT\n--input: folder of FragPipe output\n--output: output filder",-exitval => 2);
 }
@@ -53,12 +54,14 @@ if ($tmt_plex eq "TMT" && (!$tmt_plex || !$Ref_Tag))
 
 # check files and folders
 
-if (!(-e $protein_database)) 
+#print "#####\n$protein_sequence_file\n"; print -e $protein_sequence_file; print "\n######\n";
+
+if (!(-e $protein_sequence_file)) 
 {
-    pod2usage(-msg => "\nCan not find protein database: $protein_database",-exitval => 2);
+    pod2usage(-msg => "\nCan not find protein database: $protein_sequence_file",-exitval => 2);
 }
 
-if (!(-e $input_dir)) 
+if (!(-d $input_dir)) 
 {
     pod2usage(-msg => "\nCan not find input folder: $input_dir",-exitval => 2);
 }
@@ -90,7 +93,7 @@ else
     }
 }
 
-if(-e "$output_dir")
+if(-d "$output_dir")
 {
     print "\nWarning! The output direction $output_dir is existing\n\n";
 }
@@ -103,7 +106,7 @@ else
 # process protein database
 
 print("Processing protein database..... \n");
-system("perl $PATH[0]/scritps/gene-protein-statistic.pl $protein_database $output_dir");
+system("perl $PATH[0]/scritps/gene-protein-statistic.pl $protein_sequence_file $output_dir");
 
 # process protein database
 if($quant_type eq "TMT")
