@@ -59,11 +59,17 @@ perl SEPEPquant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.ch
 
 ### 1. gene-protein-statistic.txt
 This file contains numbers of protein(s) of each gene in the protein database.
-1. Column 1: gene name
-2. Column 2: # of proteins of a gene
+* Column 1: gene name
+* Column 2: # of proteins of a gene
 
 ### 2. sepep_mapping_table.txt
 This file descripts mappings between SEPEPs, host gene(s) and host protein(s).
+* SEPEP_label
+* number_of_mapped_protein
+* number_of_mapped_gene
+* protein_number_of_gene
+* sorted_gene_list
+* sorted_protein_list
 
 ### 3. sepep quantification files
 TMT data: It will report both raw (sepep_matrix_raw.txt) and median centered (sepep_matrix_MD.txt) Log2(TMT ratio) for TMT data.
