@@ -1,4 +1,5 @@
-# SEPEPquant
+# SEPepQuant
+
  Tripartite graph modeling (TGM) enables comprehensive protein isoform characterization in shotgun proteomics
 
  [<img src="https://github.com/bzhanglab/SEPEPquant/blob/main/doc/protein-and-peptide-distribution.jpg" width=500 class="center">](https://github.com/bzhanglab/SEPEPquant)
@@ -38,7 +39,7 @@ FragPipe_output
 
 ## Installation
 
-SEPEPquant does not need setup or installation. While it required Rscript in your PATH. It has been test on Linux and Windows.
+SEPEPquant does not need setup or installation. While it required Rscript in your PATH. It has been test on Linux and MacOS.
 
 ## Protein database
 The exact protein database used for FragPipe is required for SEPEPquant. The database should follow the [philosopher format rules](https://github.com/Nesvilab/philosopher/wiki/How-to-Prepare-a-Protein-Database#header-formatting) and in [UniProt](https://www.uniprot.org/help/fasta-headers) format.
