@@ -42,7 +42,7 @@ FragPipe_output
 SEPEPquant does not need setup or installation. While it required Rscript in your PATH. It has been test on Linux and MacOS.
 
 ## Protein database
-The exact protein database used for FragPipe is required for SEPEPquant. The database should follow the [philosopher format rules](https://github.com/Nesvilab/philosopher/wiki/How-to-Prepare-a-Protein-Database#header-formatting) and in [UniProt](https://www.uniprot.org/help/fasta-headers) format.
+The exact protein database used for FragPipe is required for SEPEPquant. The database should follow the [philosopher format rules](https://github.com/Nesvilab/philosopher/wiki/How-to-Prepare-a-Protein-Database#header-formatting) and in [UniProt](https://www.uniprot.org/help/fasta-headers) format. An example can be found in the [protein_database] (https://github.com/bzhanglab/SEPEPquant/protein_database) folder.
 
 
 ## Examples
