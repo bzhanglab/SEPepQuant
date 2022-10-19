@@ -41,17 +41,22 @@ FragPipe_output
 
 SEPEPquant does not need setup or installation. While it required Rscript in your PATH. It has been test on Linux and MacOS.
 
+Download SEPepQuant:
+```sh
+https://github.com/bzhanglab/SEPepQuant.git
+```
+
 ## Protein database
 The exact protein database used for FragPipe is required for SEPEPquant. The database should follow the [philosopher format rules](https://github.com/Nesvilab/philosopher/wiki/How-to-Prepare-a-Protein-Database#header-formatting) and in [UniProt](https://www.uniprot.org/help/fasta-headers) format. An example can be found in the [protein_database](https://github.com/bzhanglab/SEPEPquant/protein_database) folder.
 
 
 ## Examples
 
-### Example 1: [TMT11 data set](https://www.sciencedirect.com/science/article/pii/S0092867419310037) 
+### [Example 1](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/TMT): [includes 3 TMT plex from TCC-TMT dataset](https://www.sciencedirect.com/science/article/pii/S0092867419310037) 
 ```r
 perl SEPEPquant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant TMT --plex 11 --RefTag Mix --input testing_data/TMT --output testing_data_output_TMT
 ```
-### Example 2: [Label free data set](https://www.nature.com/articles/s41586-019-0987-8) 
+### [Example 2](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/Label_free): [includes 3 samples from HCC-label free dataset](https://www.nature.com/articles/s41586-019-0987-8) 
 ```r
 perl SEPEPquant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant LF --input testing_data/Label_free --output testing_data_output_LF
 ```
@@ -90,7 +95,7 @@ Label free data: It will report both MS1 intensity and spectral count in a same 
 
 --input: folder of FragPipe output
 
---output: output filder
+--output: output folder
 
 --help: this information
 
