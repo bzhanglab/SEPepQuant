@@ -59,8 +59,8 @@ perl SEPEPquant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.ch
 
 ### 1. gene-protein-statistic.txt
 This file contains numbers of protein(s) of each gene in the protein database.
-Column 1: gene name
-Column 2: # of proteins of a gene
+1. Column 1: gene name
+2. Column 2: # of proteins of a gene
 
 ### 2. sepep_mapping_table.txt
 This file descripts mappings between SEPEPs, host gene(s) and host protein(s).
