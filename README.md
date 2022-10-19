@@ -64,12 +64,12 @@ This file contains numbers of protein(s) of each gene in the protein database.
 
 ### 2. sepep_mapping_table.txt
 This file descripts mappings between SEPEPs, host gene(s) and host protein(s).
-* SEPEP_label
-* number_of_mapped_protein
-* number_of_mapped_gene
-* protein_number_of_gene
-* sorted_gene_list
-* sorted_protein_list
+* SEPEP_label: name and class of a SEPEP
+* number_of_mapped_protein: Number of proteins belong to this SEPEP
+* number_of_mapped_gene: Number of genes belong to this SEPEP
+* protein_number_of_gene: Number of proteins belongs to host gene(s), 0 for multiple gene SEPEPs
+* sorted_gene_list: Sorted gene list
+* sorted_protein_list: Sorted protein list
 
 ### 3. sepep quantification files
 TMT data: It will report both raw (sepep_matrix_raw.txt) and median centered (sepep_matrix_MD.txt) Log2(TMT ratio) for TMT data.
