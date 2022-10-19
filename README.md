@@ -1,6 +1,6 @@
 # SEPepQuant
 
- Tripartite graph modeling (TGM) enables comprehensive protein isoform characterization in shotgun proteomics
+ A graph theory-based approach enables comprehensive protein isoform characterization in shotgun proteomics
 
  [<img src="https://github.com/bzhanglab/SEPEPquant/blob/main/doc/protein-and-peptide-distribution.jpg" width=500 class="center">](https://github.com/bzhanglab/SEPEPquant)
 
