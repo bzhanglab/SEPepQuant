@@ -45,6 +45,21 @@ Download SEPepQuant:
 git clone https://github.com/bzhanglab/SEPepQuant.git
 ```
 
+## Running SEPepQuant
+
+```sh
+
+perl SEPepQuant.pl
+
+Parameters
+--database: protein database used for database searching
+--quant: LF or TMT
+--plex: TMT plex, required if --quant is TMT
+--RefTag: Tag of TMT reference channel, required if --quant is TMT
+--input: folder of FragPipe output
+--output: output folder
+--help: this information
+```
 ## Protein database
 The exact protein database used for FragPipe is required for SEPEPquant. The database should follow the [philosopher format rules](https://github.com/Nesvilab/philosopher/wiki/How-to-Prepare-a-Protein-Database#header-formatting) and in [UniProt](https://www.uniprot.org/help/fasta-headers) format. An example can be found in the [protein_database](https://github.com/bzhanglab/SEPEPquant/protein_database) folder.
 
@@ -82,21 +97,7 @@ TMT data: It will report both raw (sepep_matrix_raw.txt) and median centered (se
 Label free data: It will report both MS1 intensity and spectral count in a same file.
 
 
-## Parameters
 
---database: protein database used for database searching
-
---quant: LF or TMT
-
---plex: TMT plex, required if --quant is TMT
-
---RefTag: Tag of TMT reference channel, required if --quant is TMT
-
---input: folder of FragPipe output
-
---output: output folder
-
---help: this information
 
 
 
