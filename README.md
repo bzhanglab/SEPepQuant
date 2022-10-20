@@ -37,8 +37,8 @@ Usage: perl SEPepQuant.pl [Options]
 Parameters:
 --database  protein database used for database searching
 --quant LF or TMT
---plex  TMT plex, required if --quant is TMT
---RefTag    Tag of TMT reference channel, required if --quant is TMT
+--plex  TMT plex, required if "--quant" is TMT
+--RefTag    Tag of TMT reference channel, required if "--quant" is TMT
 --input folder of FragPipe output
 --output    output folder
 --help  this information
