@@ -63,9 +63,7 @@ FragPipe_output
 │
 ├── Sample3/TMT3
 │   ├── peptide.tsv
-│
-├── Sample4/TMT4
-│   ├── peptide.tsv
+
 
 ```
 
