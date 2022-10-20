@@ -72,11 +72,11 @@ FragPipe_output
 
 # Example Usage
 
-### [Example 1](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/TMT): includes 3 TMT plex from the [TCC-TMT](https://www.sciencedirect.com/science/article/pii/S0092867419310037) dataset, estimated running time: 30 minutes
+### [Example 1](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/TMT): includes 3 TMT plex from the [TCC-TMT](https://www.sciencedirect.com/science/article/pii/S0092867419310037) dataset (about 30 minutes)
 ```r
 perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant TMT --plex 11 --RefTag Mix --input testing_data/TMT --output testing_data_output_TMT
 ```
-### [Example 2](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/Label_free): includes 3 samples from the [HCC-label free](https://www.nature.com/articles/s41586-019-0987-8) dataset, estimated running time: 5 minutes 
+### [Example 2](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/Label_free): includes 3 samples from the [HCC-label free](https://www.nature.com/articles/s41586-019-0987-8) dataset (about 5 minutes) 
 ```r
 perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant LF --input testing_data/Label_free --output testing_data_output_LF
 ```
