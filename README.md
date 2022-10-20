@@ -17,7 +17,36 @@ The TGM approach involves four major steps (Fig. a-d). First, a tripartite graph
 In contrast to existing methods that make protein inference and then use protein groups or genes as the reporting and quantification unit, the TGM approach uses SEPEP as the reporting and quantification unit (Fig. e). Both methods share the same database searching, PSM FDR control, and peptide FDR control protocols. SEPEP identification and SEPEP level FDR control are performed in parallel to the standard protein inference and protein level FDR control. Finally, the same algorithm can be used to report quantification at SEPEP, gene, and protein group levels. 
 
 
-# Usage 
+## Installation
+
+SEPepQuant does not need setup or installation. While it required Rscript in your PATH. It has been test on Linux and MacOS.
+
+Download SEPepQuant:
+```sh
+git clone https://github.com/bzhanglab/SEPepQuant.git
+```
+
+## Running SEPepQuant
+
+SEPepQuant runs from a command line as follows:
+
+```sh
+
+Usage: perl SEPepQuant.pl [Options]
+
+Parameters:
+--database  protein database used for database searching
+--quant LF or TMT
+--plex  TMT plex, required if --quant is TMT
+--RefTag    Tag of TMT reference channel, required if --quant is TMT
+--input folder of FragPipe output
+--output    output folder
+--help  this information
+```
+#### NOTE:
+
+The exact protein database used for FragPipe is required for SEPEPquant. The database should follow the [philosopher format rules](https://github.com/Nesvilab/philosopher/wiki/How-to-Prepare-a-Protein-Database#header-formatting) and in [UniProt](https://www.uniprot.org/help/fasta-headers) format. An example can be found in the [protein_database](https://github.com/bzhanglab/SEPEPquant/protein_database) folder.
+
 Curently, SEPEPquant only support [FragPipe](https://fragpipe.nesvilab.org/) processed Label free and TMT data. The input files should be organized as the following format:
 
 ```shell
@@ -36,35 +65,8 @@ FragPipe_output
 
 ```
 
-## Installation
 
-SEPepQuant does not need setup or installation. While it required Rscript in your PATH. It has been test on Linux and MacOS.
-
-Download SEPepQuant:
-```sh
-git clone https://github.com/bzhanglab/SEPepQuant.git
-```
-
-## Running SEPepQuant
-
-```sh
-
-Usage: perl SEPepQuant.pl [Options]
-
-Parameters:
---database  protein database used for database searching
---quant LF or TMT
---plex  TMT plex, required if --quant is TMT
---RefTag    Tag of TMT reference channel, required if --quant is TMT
---input folder of FragPipe output
---output    output folder
---help  this information
-```
-### Protein database
-The exact protein database used for FragPipe is required for SEPEPquant. The database should follow the [philosopher format rules](https://github.com/Nesvilab/philosopher/wiki/How-to-Prepare-a-Protein-Database#header-formatting) and in [UniProt](https://www.uniprot.org/help/fasta-headers) format. An example can be found in the [protein_database](https://github.com/bzhanglab/SEPEPquant/protein_database) folder.
-
-
-## Examples
+## Example Usage
 
 ### [Example 1](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/TMT): includes 3 TMT plex from the [TCC-TMT](https://www.sciencedirect.com/science/article/pii/S0092867419310037) dataset 
 ```r
