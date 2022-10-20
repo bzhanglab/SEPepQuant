@@ -49,7 +49,7 @@ git clone https://github.com/bzhanglab/SEPepQuant.git
 
 ```sh
 
-perl SEPepQuant.pl
+Usage: perl SEPepQuant.pl [Options]
 
 Parameters
 --database: protein database used for database searching
