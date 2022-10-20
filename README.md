@@ -103,7 +103,7 @@ perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.ch
 perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant TMT --plex 11 --RefTag Mix --input testing_data/TMT --output testing_data_output_TMT
 ```
 
-By above commond lines, SEPepQuant will identify and quantify SEPEPs for the example label free and TMT data in the [testing_data](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/) folder. SEPepQuant will creat output folders testing_data_output_LF and testing_data_output_TMT for label free and TMT data, respectively. The running times for label free and TMT data are about 5 and 30 minutes. The same outputs are expected which are shwon in the [testing_data_output](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data_output/) folder. 
+By above commond lines, SEPepQuant will identify and quantify SEPEPs for the example label free and TMT data in the [testing_data](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/) folder. SEPepQuant will creat output folders testing_data_output_LF and testing_data_output_TMT for label free and TMT data, respectively. The running times for label free and TMT data are about 5 and 30 minutes. The same outputs are expected which are shown in the [testing_data_output](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data_output/) folder. 
 
 
 
