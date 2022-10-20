@@ -67,7 +67,7 @@ FragPipe_output
 ```
 
 
-# Example Usage
+# Example usage
 
 ### [Example 1](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/TMT): includes 3 TMT plex from the [TCC-TMT](https://www.sciencedirect.com/science/article/pii/S0092867419310037) dataset (about 30 minutes)
 ```r
