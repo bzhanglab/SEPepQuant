@@ -98,7 +98,7 @@ Enter the directory where you downloaded SEPepQuant and type the following comma
 perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant LF --input testing_data/Label_free --output testing_data_output_LF
 ```
 
-### [Example 1](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/TMT): 3 TMT plex from the [TCC-TMT](https://www.sciencedirect.com/science/article/pii/S0092867419310037) dataset
+### [Example 2](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/TMT): 3 TMT plex from the [TCC-TMT](https://www.sciencedirect.com/science/article/pii/S0092867419310037) dataset
 ```r
 perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant TMT --plex 11 --RefTag Mix --input testing_data/TMT --output testing_data_output_TMT
 ```
