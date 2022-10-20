@@ -1,5 +1,5 @@
-# SEPepQuant
-## A graph theory-based approach enables comprehensive protein isoform characterization in shotgun proteomics
+# Introduction
+### SEPepQuant: a graph theory-based approach enables comprehensive protein isoform characterization in shotgun proteomics
 
  [<img src="https://github.com/bzhanglab/SEPEPquant/blob/main/doc/protein-and-peptide-distribution.jpg" width=500 class="center">](https://github.com/bzhanglab/SEPEPquant)
 
@@ -17,7 +17,7 @@ The TGM approach involves four major steps (Fig. a-d). First, a tripartite graph
 In contrast to existing methods that make protein inference and then use protein groups or genes as the reporting and quantification unit, the TGM approach uses SEPEP as the reporting and quantification unit (Fig. e). Both methods share the same database searching, PSM FDR control, and peptide FDR control protocols. SEPEP identification and SEPEP level FDR control are performed in parallel to the standard protein inference and protein level FDR control. Finally, the same algorithm can be used to report quantification at SEPEP, gene, and protein group levels. 
 
 
-## Installation
+# Installation
 
 SEPepQuant does not need setup or installation. While it required Rscript in your PATH. It has been test on Linux and MacOS.
 
@@ -26,7 +26,7 @@ Download SEPepQuant:
 git clone https://github.com/bzhanglab/SEPepQuant.git
 ```
 
-## Running SEPepQuant
+# Running SEPepQuant
 
 SEPepQuant runs from a command line as follows:
 
@@ -43,7 +43,7 @@ Parameters:
 --output    output folder
 --help  this information
 ```
-#### NOTE:
+### Notes of parameters:
 
 The exact protein database used for FragPipe is required for SEPEPquant. The database should follow the [philosopher format rules](https://github.com/Nesvilab/philosopher/wiki/How-to-Prepare-a-Protein-Database#header-formatting) and in [UniProt](https://www.uniprot.org/help/fasta-headers) format. An example can be found in the [protein_database](https://github.com/bzhanglab/SEPEPquant/protein_database) folder.
 
@@ -66,18 +66,18 @@ FragPipe_output
 ```
 
 
-## Example Usage
+# Example Usage
 
-### [Example 1](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/TMT): includes 3 TMT plex from the [TCC-TMT](https://www.sciencedirect.com/science/article/pii/S0092867419310037) dataset 
+### [Example 1](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/TMT): includes 3 TMT plex from the [TCC-TMT](https://www.sciencedirect.com/science/article/pii/S0092867419310037) dataset, estimated running time: 30 minutes
 ```r
 perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant TMT --plex 11 --RefTag Mix --input testing_data/TMT --output testing_data_output_TMT
 ```
-### [Example 2](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/Label_free): includes 3 samples from the [HCC-label free](https://www.nature.com/articles/s41586-019-0987-8) dataset 
+### [Example 2](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/Label_free): includes 3 samples from the [HCC-label free](https://www.nature.com/articles/s41586-019-0987-8) dataset, estimated running time: 5 minutes 
 ```r
 perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant LF --input testing_data/Label_free --output testing_data_output_LF
 ```
 
-## Outputs
+# Outputs
 
 ### 1. gene-protein-statistic.txt
 This file contains numbers of protein(s) of each gene in the protein database.
