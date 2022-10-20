@@ -51,7 +51,7 @@ git clone https://github.com/bzhanglab/SEPepQuant.git
 
 Usage: perl SEPepQuant.pl [Options]
 
-Parameters：
+Parameters:
 --database  protein database used for database searching
 --quant LF or TMT
 --plex  TMT plex, required if --quant is TMT
@@ -60,7 +60,7 @@ Parameters：
 --output    output folder
 --help  this information
 ```
-## Protein database
+### Protein database
 The exact protein database used for FragPipe is required for SEPEPquant. The database should follow the [philosopher format rules](https://github.com/Nesvilab/philosopher/wiki/How-to-Prepare-a-Protein-Database#header-formatting) and in [UniProt](https://www.uniprot.org/help/fasta-headers) format. An example can be found in the [protein_database](https://github.com/bzhanglab/SEPEPquant/protein_database) folder.
 
 
