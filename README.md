@@ -66,18 +66,6 @@ FragPipe_output
 
 ```
 
-
-# Example usage
-
-### [Example 1](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/TMT): includes 3 TMT plex from the [TCC-TMT](https://www.sciencedirect.com/science/article/pii/S0092867419310037) dataset (about 30 minutes)
-```r
-perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant TMT --plex 11 --RefTag Mix --input testing_data/TMT --output testing_data_output_TMT
-```
-### [Example 2](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/Label_free): includes 3 samples from the [HCC-label free](https://www.nature.com/articles/s41586-019-0987-8) dataset (about 5 minutes) 
-```r
-perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant LF --input testing_data/Label_free --output testing_data_output_LF
-```
-
 # Outputs
 
 ### 1. gene-protein-statistic.txt
@@ -99,6 +87,23 @@ TMT data: It will report both raw (sepep_matrix_raw.txt) and median centered (se
  
 Label free data: It will report both MS1 intensity and spectral count in a same file.
 
+
+# Example usage
+
+Enter the directory where you downloaded SEPepQuant and type the following command lines in your terminal:
+
+
+### [Example 1](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/Label_free): includes 3 samples from the [HCC-label free](https://www.nature.com/articles/s41586-019-0987-8) dataset
+```r
+perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant LF --input testing_data/Label_free --output testing_data_output_LF
+```
+
+### [Example 1](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/TMT): includes 3 TMT plex from the [TCC-TMT](https://www.sciencedirect.com/science/article/pii/S0092867419310037) dataset
+```r
+perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant TMT --plex 11 --RefTag Mix --input testing_data/TMT --output testing_data_output_TMT
+```
+
+SEPepQuant will identify and quantify SEPEPs for the example label free and TMT data in the [testing_data](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/) folder. SEPepQuant will creat output folders testing_data_output_LF and testing_data_output_TMT for output files for TMT and label free exmaples, respectively. The running times for label free and TMT data are about 5 and 30 minutes. Exacted the sample outputs are expected which are shwon in the [testing_data_output](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data_output/) folder. 
 
 
 
