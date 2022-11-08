@@ -1,6 +1,9 @@
 # Introduction
 ### SEPepQuant: a graph theory-based approach enables comprehensive protein isoform characterization in shotgun proteomics
 
+### View our manuscript on [bioRxiv](https://www.biorxiv.org/content/10.1101/2022.11.03.515027v1)
+
+
  [<img src="https://github.com/bzhanglab/SEPEPquant/blob/main/doc/protein-and-peptide-distribution.jpg" width=500 class="center">](https://github.com/bzhanglab/SEPEPquant)
 
 Among the 19449 protein coding genes annotated in a RefSeq database, 14698 (75.6%) have more than one protein isoforms, and 3409 (17.5%) have 10 or more protein isoforms (Fig. a). Most of isoforms from the same gene have very high sequence similarity (>90%, Fig. b). However, among the 11809 genes with three or more protein isoforms, 6165 (52.2%) have at least one pair of isoforms with a sequence similarity lower than 90%, or an average of one amino acid difference in every 10 amino acids, suggesting the possibility to identify isoform-discriminating peptide sequences for a substantial number of genes.
