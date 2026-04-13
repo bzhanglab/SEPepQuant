@@ -1,7 +1,7 @@
 # Introduction
 ### SEPepQuant: a graph theory-based approach enables comprehensive protein isoform characterization in shotgun proteomics
 
-### View our manuscript on [bioRxiv](https://www.biorxiv.org/content/10.1101/2022.11.03.515027v1)
+### View our manuscript on [Nature Communications](https://www.nature.com/articles/s41467-023-41558-2)
 
 
  [<img src="https://github.com/bzhanglab/SEPEPquant/blob/main/doc/protein-and-peptide-distribution.jpg" width=500 class="center">](https://github.com/bzhanglab/SEPEPquant)
