@@ -26,7 +26,7 @@ my $input_dir="";
 
 if (scalar(@ARGV) == 0)
 {
-    pod2usage(-msg => "Usage :\n--database: protein database used for database searching\n--quant: LF or TMT\n--plex: TMT plex, required if --quant is TMT\n--RefTag: Tag of TMT reference channel, required if --quant is TMT\n--input: folder of FragPipe output\n--output: output filder\n--help: help information\n",-exitval => 2)
+    pod2usage(-msg => "Usage :\n--database: protein database used for database searching\n--quant: LF, TMT or DIA\n--plex: TMT plex, required if --quant is TMT\n--RefTag: Tag of TMT reference channel, required if --quant is TMT\n--input: folder of FragPipe output\n--output: output filder\n--help: help information\n",-exitval => 2)
 }
 
 GetOptions("database=s" => \$protein_sequence_file,
@@ -40,11 +40,11 @@ GetOptions("database=s" => \$protein_sequence_file,
 
 if ($help ==1 )
 {
-    pod2usage(-msg => "Usage:\n--database: protein database used for database searching\n--quant: LF or TMT\n--plex: TMT plex, required if --quant is TMT\n--RefTag: Tag of TMT reference channel, required if --quant is TMT\n--input: folder of FragPipe output\n--output: output filder\n--help: this information\n",-exitval => 2)
+    pod2usage(-msg => "Usage:\n--database: protein database used for database searching\n--quant: LF, TMT or DIA\n--plex: TMT plex, required if --quant is TMT\n--RefTag: Tag of TMT reference channel, required if --quant is TMT\n--input: folder of FragPipe or Dia_NN output\n--output: output filder\n--help: this information\n",-exitval => 2)
 }
 elsif (!$protein_sequence_file || !$quant_type || !$input_dir || !$output_dir) 
 {
-    pod2usage(-msg => "\nAll these parameters are required: --database, --quant, --input, and --output!\n--database: protein database used for database searching\n--quant: LF or TMT\n--input: folder of FragPipe output\n--output: output filder",-exitval => 2);
+    pod2usage(-msg => "\nAll these parameters are required: --database, --quant, --input, and --output!\n--database: protein database used for database searching\n--quant: LF, TMT or DIA\n--input: folder of FragPipe or Dia_NN output\n--output: output filder",-exitval => 2);
 }
 
 if ($tmt_plex eq "TMT" && (!$tmt_plex || !$Ref_Tag)) 
@@ -65,7 +65,7 @@ if (!(-d $input_dir))
 {
     pod2usage(-msg => "\nCan not find input folder: $input_dir",-exitval => 2);
 }
-else
+elsif($quant_type ne "DIA")
 {
     opendir(DIR, $input_dir)|| die "Cannot open directory: $input_dir!";
     @folder_list = readdir(DIR);
@@ -91,6 +91,21 @@ else
     {
         print "The input folder $input_dir is empty.\n";
     }
+}
+elsif($quant_type eq "DIA")
+{
+    opendir(DIR, $input_dir)|| die "Cannot open directory: $input_dir!";
+    @folder_list = readdir(DIR);
+    closedir(DIR);
+    if(!(-e "$input_dir/report.pr_matrix.tsv"))
+    {
+        print "No report.pr_matrix.tsv found in $input_dir\n";
+        exit;
+    }
+    else
+    {
+        print "Found required files in: $input_dir\n";
+    }   
 }
 
 if(-d "$output_dir")
@@ -141,6 +156,12 @@ elsif($quant_type eq "LF")
     system("Rscript $PATH[0]/scritps/quantification-LF.r $input_dir $output_dir"); 
     system("Rscript $PATH[0]/scritps/combine-quantification-LF.r $input_dir $output_dir");    
 }
-
+elsif($quant_type eq "DIA")
+{
+    print "Processing Dia_NN output for $input_dir\n";
+    system("Rscript $PATH[0]/scritps/process-matrix-DIANN.r $input_dir $output_dir/gene-protein-statistic.txt $output_dir/protein-gene-mapping.txt");
+    system("Rscript $PATH[0]/scritps/sepep_level_processing_DIANN.r $input_dir $output_dir");
+ 
+}
 
 
