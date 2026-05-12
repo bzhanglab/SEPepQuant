@@ -54,7 +54,7 @@ The exact protein database used for FragPipe is required for SEPEPquant. The dat
 
 --input:
 
-Curently, SEPEPquant only support [FragPipe](https://fragpipe.nesvilab.org/) processed Label free and TMT data. The input files should be organized as the following format:
+For label free and TMT data, SEPEPquant only support [FragPipe](https://fragpipe.nesvilab.org/) processed output. The input files should be organized as the following format:
 
 ```shell
 FragPipe_output
@@ -66,6 +66,18 @@ FragPipe_output
 │
 ├── Sample3/TMT3
 │   ├── peptide.tsv
+
+```
+
+For DIA data, SEPEPquant only support [Dia_NN](https://github.com/vdemichev/diann) output. The input files should be organized as the following format:
+
+```shell
+Dia_NN_output
+├── report.pr_matrix.tsv
+│
+├── report.gg_matrix.tsv
+│
+
 
 ```
 
