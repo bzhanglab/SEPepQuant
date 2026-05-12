@@ -101,9 +101,14 @@ Enter the directory where you downloaded SEPepQuant and type the following comma
 perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant LF --input testing_data/Label_free --output testing_data_output_LF
 ```
 
-### [Example 2](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/TMT): 3 TMT plex from the [TCC-TMT](https://www.sciencedirect.com/science/article/pii/S0092867419310037) dataset
+### [Example 2](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/TMT): 3 TMT plex from the [HCC-TMT](https://www.sciencedirect.com/science/article/pii/S0092867419310037) dataset
 ```r
 perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant TMT --plex 11 --RefTag Mix --input testing_data/TMT --output testing_data_output_TMT
+```
+
+### [Example 3](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/DIA_NN): 4 DIA samples from the [CPTAC_STAD](https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(26)00173-4) dataset
+```r
+perl SEPepQuant.pl --database protein_database/GENCODE.V42.basic.CHR.combined_contaminants_diann.fa --quant DIA --input testing_data/DIA_NN --output testing_data_output/DIA_NN
 ```
 
 By above commond lines, SEPepQuant will identify and quantify SEPEPs for the example label free and TMT data in the [testing_data](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/) folder. SEPepQuant will creat output folders testing_data_output_LF and testing_data_output_TMT for label free and TMT data, respectively. The running times for label free and TMT data are about 5 and 30 minutes. The same outputs are expected which are shown in the [testing_data_output](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data_output/) folder. 
