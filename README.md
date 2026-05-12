@@ -118,7 +118,7 @@ perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.ch
 perl SEPepQuant.pl --database protein_database/GRCh38_latest_protein_NP_YP_XP.changeHeaderFormatUniprot.maxquant_contaminants.fa --fdr 0.01 --quant TMT --plex 11 --RefTag Mix --input testing_data/TMT --output testing_data_output_TMT
 ```
 
-### [Example 3](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/DIA_NN): 4 DIA samples from the [CPTAC_STAD](https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791(26)00173-4) dataset
+### [Example 3](https://github.com/bzhanglab/SEPepQuant/tree/main/testing_data/DIA_NN): 4 DIA samples from the [CPTAC_CCRCC](https://www.sciencedirect.com/science/article/pii/S0092867419311237) dataset
 ```r
 perl SEPepQuant.pl --database protein_database/GENCODE.V42.basic.CHR.combined_contaminants_diann.fa --quant DIA --input testing_data/DIA_NN --output testing_data_output/DIA_NN
 ```
