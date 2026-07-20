@@ -6,6 +6,11 @@ if (length(argv) != 3) {
   q(status = 1)
 }
 
+lines <- readLines(paste(argv[1],"/report.pr_matrix.tsv",sep=""), warn = FALSE)
+lines <- gsub('"', "", lines)
+lines <- gsub("\'", "", lines)
+writeLines(lines, paste(argv[1],"/report.pr_matrix.tsv",sep=""))
+
 peptide_table = read.table(paste(argv[1],"/report.pr_matrix.tsv",sep=""),header = TRUE,stringsAsFactors=FALSE, sep = "\t",check.name=FALSE)
 peptide_table=peptide_table[!grepl("^Cont",peptide_table$Protein.Ids,perl=TRUE),] ##remove decoy
 gene_protein_number=read.table(argv[2],sep="\t",row.names = 1,header = FALSE)

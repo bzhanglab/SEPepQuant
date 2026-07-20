@@ -6,6 +6,11 @@ if (length(argv) != 2) {
   q(status = 1)
 }
 
+lines <- readLines(paste(argv[1],"/peptide.tsv",sep=""), warn = FALSE)
+lines <- gsub('"', "", lines)
+lines <- gsub("\'", "", lines)
+writeLines(lines, paste(argv[1],"/peptide.tsv",sep=""))
+
 gene_protein_number=read.table(argv[2],sep="\t",row.names = 1,header = TRUE)
 peptide_inf = read.table(paste(argv[1],"/peptide.tsv",sep=""),header = TRUE,stringsAsFactors=FALSE, sep = "\t",row.names=1,check.name=FALSE)
 peptide_inf=peptide_inf[!grepl("Cont",peptide_inf$Protein),] ##remove decoy

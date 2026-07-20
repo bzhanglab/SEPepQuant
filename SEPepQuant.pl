@@ -121,7 +121,14 @@ else
 # process protein database
 
 print("Processing protein database..... \n");
-system("perl $PATH[0]/scritps/gene-protein-statistic.pl $protein_sequence_file $output_dir");
+if($quant_type ne "DIA")
+{
+    system("perl $PATH[0]/scritps/gene-protein-statistic-non-Dia-NN.pl $protein_sequence_file $output_dir");
+}
+else
+{
+    system("perl $PATH[0]/scritps/gene-protein-statistic-Dia-NN.pl $protein_sequence_file $output_dir");
+}
 
 # process protein database
 if($quant_type eq "TMT")

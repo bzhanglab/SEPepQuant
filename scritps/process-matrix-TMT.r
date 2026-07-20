@@ -7,6 +7,12 @@ if (length(argv) != 4) {
 }
 
 tmt_plex=as.numeric(argv[2])
+
+lines <- readLines(paste(argv[1],"/peptide.tsv",sep=""), warn = FALSE)
+lines <- gsub('"', "", lines)
+lines <- gsub("\'", "", lines)
+writeLines(lines, paste(argv[1],"/peptide.tsv",sep=""))
+
 gene_protein_number=read.table(argv[4],sep="\t",row.names = 1,header = TRUE)
 peptide_table = read.table(paste(argv[1],"/peptide.tsv",sep=""),header = TRUE,stringsAsFactors=FALSE, sep = "\t",row.names=1,check.name=FALSE)
 peptide_table=peptide_table[!grepl("Cont",peptide_table$Protein),] ##remove decoy
