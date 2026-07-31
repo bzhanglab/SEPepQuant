@@ -9,6 +9,7 @@ if (length(argv) != 3) {
 lines <- readLines(paste(argv[1],"/report.pr_matrix.tsv",sep=""), warn = FALSE)
 lines <- gsub('"', "", lines)
 lines <- gsub("\'", "", lines)
+lines <- gsub(" ", "", lines)
 writeLines(lines, paste(argv[1],"/report.pr_matrix.tsv",sep=""))
 
 peptide_table = read.table(paste(argv[1],"/report.pr_matrix.tsv",sep=""),header = TRUE,stringsAsFactors=FALSE, sep = "\t",check.name=FALSE)
@@ -62,7 +63,7 @@ for(j in 1:nrow(peptide_inf))
   }
 }
 
-peptide_intensity=format(peptide_intensity,scientific = TRUE)
+peptide_intensity=format(peptide_intensity,scientific = TRUE,trim = TRUE)
 combined_results=cbind(peptide_inf,peptide_intensity)
 write.table(combined_results,file=paste(argv[1],"/processed-report.pr_matrix.tsv",sep=""),sep="\t",row.names=FALSE,col.names = TRUE,quote=FALSE)
 
